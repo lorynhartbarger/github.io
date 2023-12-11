@@ -44,7 +44,15 @@
     }
 
     .reset-score{
-      background-color: blue;
+      background-color: transparent;
+      border: 3px solid white;
+      cursor: pointer;
+      border-radius: 30px;
+      color: white;
+      padding: 10px;
     }
 
- 
+    .reset-score:hover{
+      background-color: rgb(240,240,240);
+      color: black;
+    }

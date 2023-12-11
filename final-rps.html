@@ -46,7 +46,7 @@
       score.computerWins = 0;
       localStorage.removeItem('score');
       updateScoreElement();
-      " class=".reset-score">Reset Score </button>
+      " class="reset-score">Reset Score </button>
  
     <script>
       let score = JSON.parse(localStorage.getItem('score')) || {
@@ -63,7 +63,7 @@
               // Add a delay before calling playGame
               setTimeout(() => {
                 playGame('rock', 'paper', 'scissors', computerMove, playerMove);
-              }, 50000); // Adjust the delay as needed (in milliseconds)
+              }, 1000); // Adjust the delay as needed (in milliseconds)
             };
  
       function playGame(playerMove, computerWin, computerLose,computerMove){
