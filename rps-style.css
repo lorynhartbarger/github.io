@@ -5,7 +5,7 @@
   }
  
     body{
-      background-color: rgb(25,25,25);
+      background: linear-gradient(to bottom, black, gray);
       color: white;
       font-family: Arial;
       text-align:center;
@@ -20,6 +20,10 @@
 
     .move-icon{
       height: 50px;
+    }
+
+    .play-again{
+      display: none;
     }
     
     .move-button{
@@ -39,7 +43,7 @@
     }
 
     .result{
-     font-size: 50px; 
+     font-size: 20px; 
      font-weight: bold;
     }
 
