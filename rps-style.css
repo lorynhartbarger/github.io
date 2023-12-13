@@ -24,6 +24,19 @@
 
     .play-again{
       display: none;
+      background-color: transparent;
+      border: 3px solid white;
+      cursor: pointer;
+      border-radius: 15px;
+      color: white;
+      padding: 5px;
+      margin: 30px;
+    }
+
+    .play-again:hover {
+      background-color: rgb(240,240,240);
+      color: black;
+      font-weight: bold;
     }
     
     .move-button{
