@@ -42,15 +42,14 @@
     " class="reset-score">Reset Score </button>
 
   <script>
-  window.addEventListener('beforeunload', function(){
-    localStorage.clear();
-  });
 
   let score = JSON.parse(localStorage.getItem('score')) || {
         playersScore: 0,
         computersScore: 0
       };
-
+  window.addEventListener('beforeunload', function(){
+    localStorage.clear();
+  });
 
   function playersPick (playerMove){
     setTimeout(() => { 
