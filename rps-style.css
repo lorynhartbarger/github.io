@@ -13,6 +13,16 @@
       margin: 0;
     }
 
+    header{
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: rgb(217, 182, 5);
+    }
+    .created-by{
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: rgb(217, 182, 7);
+    }
     .title{
       font-size: 30px;
       font-weight: bold;
@@ -58,18 +68,25 @@
     .result{
      font-size: 20px; 
      font-weight: bold;
+     margin-top: 50px;
+    }
+
+    .score{
+      margin-top: 50px;
     }
 
     .reset-score{
       background-color: transparent;
       border: 3px solid white;
       cursor: pointer;
-      border-radius: 30px;
+      border-radius: 15px;
       color: white;
-      padding: 10px;
+      padding: 5px;
+      margin: 30px;
     }
 
     .reset-score:hover{
       background-color: rgb(240,240,240);
       color: black;
+      font-weight: bold;
     }
