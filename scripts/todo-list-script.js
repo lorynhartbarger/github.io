@@ -4,6 +4,7 @@
     name: '',
     dueDate:''
   }];
+  
   renderTodoList();
 
   function renderTodoList() {
