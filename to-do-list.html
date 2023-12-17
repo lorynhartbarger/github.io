@@ -4,16 +4,20 @@
     <title>To Do List</title>
     <link rel="stylesheet" href="styles/to-do-style.css">
   </head>
+  <header>To Do List</header>
   <body>
-    <p>To Do List</p>
 
-    <div class="to-do-input-grid">
-      <input placeholder="Todo name" class="js-name-input name-input">
-      <input type ="date" class="js-due-date-input">  
-      <button onclick="addTodo();">Add</button>
+    <div class="task-input-grid">
+      <input placeholder="type your task name here"
+        class="js-taskname-input">
+      <input type="date"
+        class="js-duedate-input">
+      <input type="time"
+        class="js-time-input">
+      <button class="js-add-button">Add Task</button>
     </div>
 
-    <div class="js-todo-list to-do-grid"></div>  
+    <div class="js-to-do-list task-list"></div>
     <script src="scripts/todo-list-script.js"></script>
   </body>
 </html>

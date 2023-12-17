@@ -1,51 +1,49 @@
+  const toDoList = [{
+    task:'',
+    dueDate:'',
+    time:''
+    }]
 
+  function renderToDoList(){
+    let toDoListHTML = '';
 
-  const todoList = [{
-    name: '',
-    dueDate:''
-  }];
-  
-  renderTodoList();
-
-  function renderTodoList() {
-    let todoListHTML = '';
-    for(let i = 0; i < todoList.length; i++) {
-      const todoObject = todoList[i];
-      //const name = todoOblject.name;
-      //const dueDate = todoOblject.dueDate;
-      const {name, dueDate} = todoObject;
-      const html = `
-      <div>${name} </div>
-      <div>${dueDate}</div>
-      <button onclick="
-          todoList.splice(${i},1);
-          renderTodoList();
-        " class="js-delete">Delete</button>
+    toDoList.forEach((toDoObject, index) => {
+      const {task, dueDate, time} = toDoObject;
+      const HTML = `
+        <div>${task}</div>  
+        <div>${dueDate}</div>  
+        <div>${time}</div>  
+        <button class="delete-button js-delete-button">Delete</button>
       `;
-      todoListHTML += html;
-    }
-    document.querySelector('.js-todo-list')
-      .innerHTML = todoListHTML;
-  };
-
-  function addTodo(){
-    const inputElement = document.querySelector('.js-name-input');
-    const name = inputElement.value;
-    
-    const dueDateInputElement = document.querySelector('.js-due-date-input');
-    const dueDate = dueDateInputElement.value;
-    
-    todoList.push({
-      name,
-      dueDate
+      toDoListHTML += HTML;
     });
+  
+    document.querySelector('.js-to-do-list').innerHTML = toDoListHTML;
+    document.querySelectorAll('.js-delete-button').forEach((deleteButton, index) => {
+      deleteButton.addEventListener('click', () => {
+        toDoList.splice(index,1);
+        renderToDoList();
+      });
+    });
+  }
 
-    inputElement.value = '';
-  renderTodoList();
-  };
+  document.querySelector('.js-add-button').addEventListener('click', () => {
+    addTask();
+  });
 
-  function hideDeleteButton(){
-    const deleteButton = document.querySelector('.js-delete');
-    deleteButton.style.display = 'none';    
-  };
+  function addTask(){
+    const inputElement = document.querySelector('.js-taskname-input');
+    const task = inputElement.value;
+    const dueDateInput = document.querySelector('.js-duedate-input');
+    const dueDate = dueDateInput.value;
+    const timeInput = document.querySelector('.js-time-input');
+    const time = timeInput.value;
 
+    toDoList.push({
+      task,
+      dueDate,
+      time
+    });
+    inputElement.value='';
+    renderToDoList();
+  }
